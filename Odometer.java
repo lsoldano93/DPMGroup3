@@ -1,26 +1,5 @@
 /*
  * File: Odometer.java
- * Written by: Sean Lawlor
- * ECSE 211 - Design Principles and Methods, Head TA
- * Fall 2011
- * 
- * Class which controls the odometer for the robot
- * 
- * Odometer defines cooridinate system as such...
- * 
- * 					0Deg:pos y-axis
- * 							|
- * 							|
- * 							|
- * 							|
- * 270Deg:neg x-axis------------------90Deg:pos x-axis
- * 							|
- * 							|
- * 							|
- * 							|
- * 					180Deg:neg y-axis
- * 
- * The odometer is initalized to 0 degrees, assuming the robot is facing up the positive y-axis
  * 
  * TEAM-03
  */

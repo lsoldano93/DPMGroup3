@@ -1,4 +1,4 @@
-/* Navigation class provided by TA's.
+/* 
  * 
  * 
  * File: LCDInfo.java

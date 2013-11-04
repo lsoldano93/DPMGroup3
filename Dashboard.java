@@ -44,6 +44,28 @@ public class Dashboard {
 		
 	}
 	
+	public void goForward(double distance, boolean continue_code)
+	{
+			// goes forward by given distance
+			
+			leftMotor.setSpeed(150);
+			rightMotor.setSpeed(150);
+			
+			double target_tacho = distance*180/(Math.PI*2.15);
+			int  target_tacho_int = (int) target_tacho;
+			
+			if(continue_code)
+			{
+				leftMotor.rotate(target_tacho_int, true);
+				rightMotor.rotate(target_tacho_int, true);
+			}
+			else
+			{
+				leftMotor.rotate(target_tacho_int, true);
+				rightMotor.rotate(target_tacho_int, false);
+			}
+	}
+	
 	/** Turns the motor backwards to make the robot move backwards at a constant speed
 	 * 
 	 * @param speed The speed at which left and right motors will rotate backwards at.

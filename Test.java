@@ -110,7 +110,7 @@ public class Test {
 		RConsole.println("DONE");
 	}
 	
-	public void odometerTest() { //Go straight until y=100; then back up until y = -5;
+	public void odometerTest() { // Simple test. Go straight 150cm then go back until y = -5
 		Button.waitForAnyPress();
 		while(odometer.getY() <= 150){
 			

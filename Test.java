@@ -38,6 +38,8 @@ public class Test {
 		odometer = new Odometer(leftMotor, rightMotor, 20, true);
 		correction = new OdometryCorrection(leftColor,	rightColor, odometer);
 		correction.start();
+		
+		LCDInfo lcd = new LCDInfo(odometer);
 
 		// Ultrasonic Filter instantiation
 		usHigh = new UltrasonicSensor(SensorPort.S1);
@@ -85,8 +87,9 @@ public class Test {
 	 * straight for 150 cm while having the color sensor facing downwards.
 	 */
 	public void lightTest() {
-
+		
 		leftColor.setFloodlight(true);
+		rightColor.setFloodlight(true);
 		RConsole.open();
 		RConsole.println("Connected");
 		Button.waitForAnyPress();
@@ -97,8 +100,10 @@ public class Test {
 				Thread.sleep(80);
 			} catch (Exception e) {
 			}
-			int color = leftColor.getNormalizedLightValue();
-			RConsole.println("" + color);
+			int colorLeft = leftColor.getNormalizedLightValue();
+			int colorRight = rightColor.getNormalizedLightValue();
+			RConsole.println("left " + colorLeft);
+			RConsole.println("right " + colorRight);
 
 		}
 

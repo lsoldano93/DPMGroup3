@@ -29,7 +29,9 @@ public class CommandCenter {
 //		
 //		// Localition instantiation (but not actually perforing localization yet)
 //		USLocalizer localizer = new USLocalizer(odometer, usHigh, USLocalizer.LocalizationType.FALLING_EDGE, nav);
-		Test test = new Test();
+		
+		// Test instantiating. Class used for running tests on methods/classes
+		Test test = new Test(); 
 		test.navigationTest();
 		
 	}

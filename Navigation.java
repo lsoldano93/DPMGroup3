@@ -27,7 +27,7 @@ public class Navigation {
 	final private static int ROTATE_SPEED = 200;
 	final private double acceptableErrorX_Y = 1;
 	final private double acceptableErrorTheta = 1;
-	final private double width = 17.43;
+	final private double width = 17.43; // 17.45 was best before
 	final private double radius = 2.054;
 	final private int left_wall_x_position = -30;
 	final private int right_wall_x_position = 90;

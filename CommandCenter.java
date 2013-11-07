@@ -30,7 +30,7 @@ public class CommandCenter {
 //		// Localition instantiation (but not actually perforing localization yet)
 //		USLocalizer localizer = new USLocalizer(odometer, usHigh, USLocalizer.LocalizationType.FALLING_EDGE, nav);
 		Test test = new Test();
-		test.odometerTest();
+		test.navigationTest();
 		
 	}
 	

@@ -110,22 +110,36 @@ public class Test {
 		RConsole.println("DONE");
 	}
 	
-	public void odometerTest() { //Go straight until y=100;
+	public void odometerTest() { //Go straight until y=100; then back up until y = -5;
 		Button.waitForAnyPress();
-//		while(odometer.getY() <= 100){
-//			
-//			dashboard.goForward(100);
-//			
-//		}
-//		dashboard.stop();
-		while(odometer.getTheta() < 200){
-			dashboard.turnRight(225);
+		while(odometer.getY() <= 150){
+			
+			dashboard.goForward(200);
+			
 		}
 		dashboard.stop();
-		
-		
-		
+
+		while(odometer.getY() >= -5){
+			
+			dashboard.goBackward(100);
+			
+		}
+		dashboard.stop();
+				
 	}
+	
+	public void navigationTest(){ // Re-doing lab 3: Navigation
+		
+		Button.waitForAnyPress();
+		nav.travelTo(60.0, 30.0);
+		nav.travelTo(30.0, 30.0);
+		nav.travelTo(30.0, 60.0);
+		nav.travelTo(60.0, 0.0);
+//		nav.travelTo(60.0, 90.0);
+		dashboard.stop();
+		Button.waitForAnyPress();
+	}
+	
 
 }
 

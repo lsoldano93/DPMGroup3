@@ -26,9 +26,9 @@ public class Navigation {
 	final private static int FORWARD_SPEED = 200;
 	final private static int ROTATE_SPEED = 200;
 	final private double acceptableErrorX_Y = 1;
-	final private double acceptableErrorTheta = 2;
-	final private double width = 16.85;
-	final private double radius = 2.15;
+	final private double acceptableErrorTheta = 1;
+	final private double width = 17.43;
+	final private double radius = 2.054;
 	final private int left_wall_x_position = -30;
 	final private int right_wall_x_position = 90;
 	final private int top_wall_y_position = 210;

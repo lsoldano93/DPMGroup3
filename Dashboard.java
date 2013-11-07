@@ -98,7 +98,7 @@ public class Dashboard {
 	 *  
 	 * @param speed The speed at which both motors rotate.
 	 */
-	public void turnRight(int speed){
+	public void turnLeft(int speed){
 		
 		leftMotor.setSpeed(speed);
 		rightMotor.setSpeed(speed);
@@ -111,7 +111,7 @@ public class Dashboard {
 	 * 
 	 * @param speed The speed at which both motors rotate.
 	 */
-	public void turnLeft(int speed){
+	public void turnRight(int speed){
 		
 		leftMotor.setSpeed(speed);
 		rightMotor.setSpeed(speed);

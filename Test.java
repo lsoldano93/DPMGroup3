@@ -68,8 +68,8 @@ public class Test {
 		RConsole.open();
 		RConsole.println("Connected");
 		Button.waitForAnyPress();
-		int distance = usFilterHigh.getFilteredDistance(); // The ultrasonic sensor
-													// pings every 60ms
+		dashboard.goForward(150);
+		int distance = usFilterHigh.getFilteredDistance(); // The ultrasonic sensor pings every 60ms
 		while (distance > 5) {
 			distance = usFilterHigh.getFilteredDistance();
 			RConsole.println("" + distance);
@@ -109,5 +109,24 @@ public class Test {
 
 		RConsole.println("DONE");
 	}
+	
+	public void odometerTest() { //Go straight until y=100;
+		Button.waitForAnyPress();
+//		while(odometer.getY() <= 100){
+//			
+//			dashboard.goForward(100);
+//			
+//		}
+//		dashboard.stop();
+		while(odometer.getTheta() < 200){
+			dashboard.turnRight(225);
+		}
+		dashboard.stop();
+		
+		
+		
+	}
 
 }
+
+

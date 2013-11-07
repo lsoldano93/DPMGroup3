@@ -1,5 +1,5 @@
 import lejos.nxt.*;
-
+// Dummy class for now. It is made just so it could test the robot's threading capabilities.
 public class OdometryCorrection extends Thread {
 	
 	private ColorSensor leftSensor;

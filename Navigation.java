@@ -20,8 +20,7 @@ public class Navigation {
 	// private NXTRegulatedMotor rightMotor;
 	private Dashboard dashboard;
 	private Odometer odometer;
-	private UltrasonicSensor usSensor;
-	private ColorSensor cs;
+	private UltrasonicSensorFilter usSensor;
 
 	// speed and error constants, and position of the walls for avoidance
 	final private static int FORWARD_SPEED = 200;
@@ -42,13 +41,11 @@ public class Navigation {
 	 * @param odo An odometer that will keep track of the robot's position and heading angle
 	 * @param ultras An ultrasonic sensor to detect obstacles in a path 
 	 */
-	public Navigation(Dashboard db, Odometer odo, UltrasonicSensor ultra, ColorSensor color) {
+	public Navigation(Dashboard db, Odometer odo, UltrasonicSensorFilter ultra) {
 
 		this.dashboard = db;
 		this.odometer = odo;
 		this.usSensor = ultra;
-
-		cs.setFloodlight(2);
 	}
 
 	/**
